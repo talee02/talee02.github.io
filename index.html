@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nurmalita Fitri Ramadani — Data Analyst</title>
-<meta name="description" content="Data Analyst & Business Intelligence portfolio of Nurmalita Fitri Ramadani — SQL, Power BI, Python, Excel projects in pharmaceutical and retail domains.">
+<meta name="description" content="Data Analyst & Business Intelligence portfolio of Nurmalita Fitri Ramadani — SQL, Power BI, Python, Excel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,418 +12,262 @@
 </head>
 <body>
 
-<div class="noise-overlay" aria-hidden="true"></div>
-<div class="hero-glow" aria-hidden="true"></div>
-
-<!-- ============ NAV ============ -->
+<!-- NAV -->
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="brand">
-      <span class="brand-prompt">nf@portfolio</span><span class="brand-tilde">:~$</span>
-    </div>
-    <nav class="tabs" id="tabs" aria-label="Section navigation">
-      <a href="#home"     class="tab" data-tab="home">    <span class="tab-dot"></span>index.html</a>
-      <a href="#about"    class="tab" data-tab="about">   <span class="tab-dot"></span>about.md</a>
-      <a href="#projects" class="tab" data-tab="projects"><span class="tab-dot"></span>projects.json</a>
-      <a href="#contact"  class="tab" data-tab="contact"> <span class="tab-dot"></span>contact.sh</a>
+    <span class="brand"><span class="brand-name">nf</span><span class="brand-sep">@</span><span class="brand-host">portfolio</span></span>
+    <nav class="tabs">
+      <a href="#home"     class="tab" data-tab="home">home</a>
+      <a href="#about"    class="tab" data-tab="about">about</a>
+      <a href="#projects" class="tab" data-tab="projects">projects</a>
+      <a href="#contact"  class="tab" data-tab="contact">contact</a>
     </nav>
-    <a class="topbar-cta" href="#contact">Hire me ↗</a>
+    <a class="hire-btn" href="#contact">Hire me</a>
   </div>
 </header>
 
 <main>
 
-  <!-- ============ HERO ============ -->
-  <section id="home" class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">DATA ANALYST · BUSINESS INTELLIGENCE</p>
-        <h1>Nurmalita Fitri<br><span class="name-accent">Ramadani</span></h1>
-        <p class="hero-lede">I turn messy operational data into dashboards and forecasts that help teams make real decisions — with SQL, Power BI, Python, and Excel.</p>
-
-        <div class="window terminal" role="img" aria-label="Terminal intro">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span>
-            <span class="window-dot dot-2"></span>
-            <span class="window-dot dot-3"></span>
-            <span class="window-title">whoami.sh</span>
-          </div>
-          <div class="window-body">
-            <pre id="terminal-output" class="terminal-text"></pre>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="https://github.com/talee02" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
-        </div>
-
-        <!-- Social strip -->
-        <div class="social-strip">
-          <a href="https://www.linkedin.com/in/nurmalitafitri/" target="_blank" rel="noopener" class="social-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com/talee02" target="_blank" rel="noopener" class="social-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-          <a href="https://www.kaggle.com/naurafitri" target="_blank" rel="noopener" class="social-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.336z"/></svg>
-            Kaggle
-          </a>
-          <a href="mailto:nurmalitafitri02@gmail.com" class="social-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-            Email
-          </a>
-        </div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="eyebrow">DATA ANALYST &nbsp;·&nbsp; BUSINESS INTELLIGENCE</p>
+      <h1>Nurmalita Fitri<br><span class="gradient-text">Ramadani</span></h1>
+      <p class="hero-desc">I turn messy operational data into dashboards and forecasts teams can act on — with SQL, Power BI, Python, and Excel.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View projects</a>
+        <a href="https://github.com/talee02" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
       </div>
-
-      <div class="hero-panel">
-        <div class="window dashboard-card">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span>
-            <span class="window-dot dot-2"></span>
-            <span class="window-dot dot-3"></span>
-            <span class="window-title">retail_dashboard.pbix</span>
-          </div>
-          <div class="window-body dashboard-body">
-            <p class="dashboard-label">Retail Supply Chain Dashboard · 2014–2018</p>
-            <div class="kpi-grid">
-              <div class="kpi"><span class="kpi-value">$2.3M</span><span class="kpi-label">Total Revenue</span></div>
-              <div class="kpi"><span class="kpi-value">10.4%</span><span class="kpi-label">Profit Margin</span></div>
-              <div class="kpi"><span class="kpi-value">5,009</span><span class="kpi-label">Total Orders</span></div>
-              <div class="kpi"><span class="kpi-value">16.0%</span><span class="kpi-label">Return Rate</span></div>
-            </div>
-            <p class="dashboard-caption">Live figures from the Retail project below ↓</p>
-          </div>
-        </div>
-
-        <!-- Stats strip -->
-        <div class="stats-strip">
-          <div class="stat"><span class="stat-n">4</span><span class="stat-l">Projects</span></div>
-          <div class="stat-div"></div>
-          <div class="stat"><span class="stat-n">3.74</span><span class="stat-l">GPA</span></div>
-          <div class="stat-div"></div>
-          <div class="stat"><span class="stat-n">3</span><span class="stat-l">Internships</span></div>
-        </div>
-
-        <p class="availability"><span class="pulse-dot"></span>Open to BI & Data Analyst roles · Surabaya / Remote</p>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/nurmalitafitri/" target="_blank" rel="noopener" class="soc">LinkedIn</a>
+        <span class="soc-sep">·</span>
+        <a href="https://github.com/talee02" target="_blank" rel="noopener" class="soc">GitHub</a>
+        <span class="soc-sep">·</span>
+        <a href="https://www.kaggle.com/naurafitri" target="_blank" rel="noopener" class="soc">Kaggle</a>
+        <span class="soc-sep">·</span>
+        <a href="mailto:nurmalitafitri02@gmail.com" class="soc">Email</a>
       </div>
     </div>
-  </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="about">
-    <p class="section-eyebrow">// about.md</p>
-    <div class="about-grid">
-      <div class="about-photo-wrap">
-        <div class="about-photo">
-          <img src="assets/profile.jpg" alt="Portrait of Nurmalita Fitri Ramadani">
+    <div class="hero-right">
+      <div class="intro-card">
+        <div class="intro-photo">
+          <img src="assets/profile.jpg" alt="Nurmalita Fitri Ramadani">
         </div>
-        <div class="edu-card">
-          <p class="edu-label">Education</p>
-          <p class="edu-school">UPN Veteran Jawa Timur</p>
-          <p class="edu-detail">S1 Data Science · GPA 3.74</p>
-        </div>
-      </div>
-
-      <div class="about-copy">
-        <h2>About me</h2>
-        <p>I'm a Data Science graduate with hands-on experience on real pharmaceutical distribution and retail supply chain datasets. I enjoy building star-schema warehouses, forecasting models, and Power BI dashboards that turn raw operational data into something teams can actually act on.</p>
-        <p>I work mainly in <strong>SQL</strong>, <strong>Power BI</strong>, <strong>Python</strong>, and <strong>Excel</strong> — and I'm looking to bring that to a Business Intelligence or Data Analyst team where clear, decision-ready insights are valued.</p>
-
-        <!-- Experience timeline -->
-        <div class="exp-block">
-          <p class="exp-heading">Experience</p>
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <p class="tl-role">Machine Learning Cohort</p>
-                <p class="tl-org">Google Bangkit Academy</p>
-                <p class="tl-period">2024</p>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <p class="tl-role">Data Science Intern</p>
-                <p class="tl-org">Pertamina EP Cepu</p>
-                <p class="tl-period">2024</p>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <p class="tl-role">Data Science Intern</p>
-                <p class="tl-org">BBPOM Surabaya</p>
-                <p class="tl-period">2023</p>
-              </div>
-            </div>
+        <div class="intro-body">
+          <p class="intro-name">Hi, I'm Lita</p>
+          <p class="intro-text">Fresh Data Science graduate from UPN Veteran Jawa Timur (GPA 3.74), based in Surabaya. I enjoy turning operational data into clear, meaningful insights.</p>
+          <div class="intro-stats">
+            <div class="istat"><span class="istat-n">4</span><span class="istat-l">Projects</span></div>
+            <div class="istat-sep"></div>
+            <div class="istat"><span class="istat-n">3.74</span><span class="istat-l">GPA</span></div>
+            <div class="istat-sep"></div>
+            <div class="istat"><span class="istat-n">3</span><span class="istat-l">Internships</span></div>
           </div>
         </div>
+      </div>
+      <p class="avail"><span class="pulse"></span>Open to BI &amp; Data Analyst roles &nbsp;·&nbsp; Surabaya / Remote</p>
+    </div>
+  </div>
+</section>
 
-        <div class="skills-block">
-          <p class="skills-query"><span class="sql-kw">SELECT</span> category, tool <span class="sql-kw">FROM</span> toolkit;</p>
-          <div class="skill-groups">
-            <div class="skill-group">
-              <span class="skill-group-label">Query & Data</span>
-              <div class="chips"><span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Excel</span></div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">BI & Visualization</span>
-              <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Dashboard Design</span></div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">Programming</span>
-              <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">Data Engineering</span>
-              <div class="chips"><span class="chip">Pentaho (ETL)</span><span class="chip">Star Schema</span></div>
-            </div>
-            <div class="skill-group">
-              <span class="skill-group-label">Forecasting & ML</span>
-              <div class="chips"><span class="chip">Time Series</span><span class="chip">TCN</span><span class="chip">Darts</span><span class="chip">Streamlit</span></div>
-            </div>
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="section-label">about</div>
+  <div class="about-grid">
+
+    <div class="about-photo-col">
+      <div class="photo-ring">
+        <img src="assets/profile.jpg" alt="Nurmalita Fitri Ramadani">
+      </div>
+      <div class="edu-card">
+        <p class="edu-tag">Education</p>
+        <p class="edu-school">UPN Veteran Jawa Timur</p>
+        <p class="edu-detail">S1 Data Science &nbsp;·&nbsp; GPA 3.74</p>
+      </div>
+    </div>
+
+    <div class="about-text-col">
+      <h2>About me</h2>
+      <p>I'm a Data Science graduate with hands-on experience on real pharmaceutical distribution and retail supply chain datasets. I enjoy building dashboards, forecasting models, and structured analyses that turn raw operational data into something teams can actually use to make decisions.</p>
+      <p>I work mainly in <strong>SQL</strong>, <strong>Power BI</strong>, <strong>Python</strong>, and <strong>Excel</strong>, and I'm looking for a Business Intelligence or Data Analyst role where clear, decision-ready insights matter.</p>
+
+      <div class="skills-section">
+        <p class="skills-title">Technical skills</p>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <span class="skill-cat">Query &amp; Data</span>
+            <div class="chips"><span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Excel</span></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-cat">BI &amp; Visualization</span>
+            <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Dashboard Design</span></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-cat">Programming</span>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-cat">Forecasting &amp; ML</span>
+            <div class="chips"><span class="chip">Time Series</span><span class="chip">TCN</span><span class="chip">Darts</span><span class="chip">Streamlit</span></div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="projects">
-    <p class="section-eyebrow">// projects.json</p>
-    <h2 class="section-title">Selected projects</h2>
+  </div>
+</section>
 
-    <!-- Project 1 — Retail Supply Chain -->
-    <article class="project">
-      <div class="project-media">
-        <div class="project-badge">Featured</div>
-        <div class="window">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span><span class="window-dot dot-2"></span><span class="window-dot dot-3"></span>
-            <span class="window-title">retail_dashboard.pbix</span>
-          </div>
-          <img src="assets/retail-dashboard.jpg" alt="Power BI dashboard — Retail Supply Chain Sales Performance Analysis">
-        </div>
-      </div>
-      <div class="project-copy">
-        <p class="project-year">2026</p>
-        <h3>Retail Supply Chain Sales Analysis</h3>
-        <p class="project-summary">Analyzed four years of retail transactions (2014–2018, 5,009 orders) to surface where the business was making and losing money. Built an interactive Power BI dashboard across revenue, margin, shipping, and sales-rep productivity.</p>
-        <ul class="project-findings">
-          <li>Technology products drove the most profit; heavier discounting consistently eroded margin.</li>
-          <li>A 16% return rate was flagged as a priority area — a clear signal for operations to investigate.</li>
-          <li>Standard Class dominated shipping at 59.8% of orders, with a consistent 3-day delivery average.</li>
-        </ul>
-        <div class="chips chips-tools">
-          <span class="chip chip-tool">Power BI</span>
-          <span class="chip chip-tool">MySQL</span>
-          <span class="chip chip-tool">DAX</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/talee02/Retail-Supply-Chain-Sales-Performance-Analysis" target="_blank" rel="noopener" class="btn-link">View code ↗</a>
-        </div>
-      </div>
-    </article>
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <div class="section-label">projects</div>
+  <h2 class="section-h2">Selected projects</h2>
 
-    <!-- Project 2 — Finance/Budget Variance -->
-    <article class="project project-reverse">
-      <div class="project-media">
-        <div class="window">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span><span class="window-dot dot-2"></span><span class="window-dot dot-3"></span>
-            <span class="window-title">budget_variance.xlsx</span>
-          </div>
-          <div class="window-body code-block">
-<pre><span class="code-comment"># Catalyst Learning Solutions</span>
-<span class="code-comment"># Finance & Budget Variance Analysis</span>
-
-Revenue variance  = <span class="code-val">+12.3%</span> vs budget
-COGS variance     = <span class="code-val">-8.1%</span>  (favorable)
-Net income actual = <span class="code-val">$142K</span>
-
-Top overspend dept: <span class="code-val">Marketing</span>
-Top underspend dept: <span class="code-val">Operations</span>
-
-<span class="code-comment"># Tools: Excel · Pivot Tables</span>
-<span class="code-comment"># Formulas: SUMIF, IFERROR, INDEX-MATCH</span></pre>
-          </div>
-        </div>
-      </div>
-      <div class="project-copy">
-        <p class="project-year">2025</p>
-        <h3>Finance & Budget Variance Analysis — Catalyst Learning Solutions</h3>
-        <p class="project-summary">End-to-end financial analysis on a simulated EdTech company's P&amp;L data — from raw messy data to a clean Excel dashboard tracking actual vs. budget across revenue, COGS, and department spending. Built to demonstrate core BI analyst skills: data cleaning, structured formulas, and executive-ready reporting.</p>
-        <ul class="project-findings">
-          <li>Identified revenue outperformance and flagged two departments with recurring budget overruns.</li>
-          <li>Built dynamic variance summaries using SUMIF, IFERROR, and INDEX-MATCH — no macros, fully transparent logic.</li>
-          <li>Structured for an analyst handoff: clean raw sheet, formula sheet, and summary dashboard in one workbook.</li>
-        </ul>
-        <div class="chips chips-tools">
-          <span class="chip chip-tool">Excel</span>
-          <span class="chip chip-tool">Pivot Tables</span>
-          <span class="chip chip-tool">Financial Analysis</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/talee02" target="_blank" rel="noopener" class="btn-link btn-link-coming">Repo coming soon ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 3 — Data Warehouse -->
-    <article class="project">
-      <div class="project-media">
-        <div class="window">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span><span class="window-dot dot-2"></span><span class="window-dot dot-3"></span>
-            <span class="window-title">star_schema.png</span>
-          </div>
-          <img src="assets/warehouse-dashboard.jpg" alt="Star schema ERD and Power BI charts for pharmaceutical data warehouse">
-        </div>
-      </div>
-      <div class="project-copy">
-        <p class="project-year">2024</p>
-        <h3>Pharmaceutical Distribution Data Warehouse (Star Schema)</h3>
-        <p class="project-summary">Designed and built a star-schema data warehouse for national pharmaceutical distribution records using Pentaho ETL and Power BI — turning fragmented operational data into one standardized, analysis-ready source.</p>
-        <ul class="project-findings">
-          <li>Distribution volumes trended downward across product categories — a finding missed in the raw transactional data.</li>
-          <li>West Java, East Java, and Jakarta consistently recorded the highest distribution activity nationwide.</li>
-        </ul>
-        <div class="chips chips-tools">
-          <span class="chip chip-tool">SQL</span>
-          <span class="chip chip-tool">Pentaho (ETL)</span>
-          <span class="chip chip-tool">Power BI</span>
-          <span class="chip chip-tool">Star Schema</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 4 — TCN Forecasting -->
-    <article class="project project-reverse">
-      <div class="project-media">
-        <div class="window">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span><span class="window-dot dot-2"></span><span class="window-dot dot-3"></span>
-            <span class="window-title">forecast_config.py</span>
-          </div>
-          <div class="window-body code-block">
-<pre><span class="code-comment"># Optimal TCN configuration</span>
-input_length   = <span class="code-val">30</span>
-kernel_size    = <span class="code-val">3</span>
-conv_blocks    = <span class="code-val">4</span>
-dilation_base  = <span class="code-val">2</span>
-
-<span class="code-comment"># Evaluation results</span>
-NMAE = <span class="code-val">0.0569</span>   <span class="code-comment"># avg error &lt; 6%</span>
-NMSE = <span class="code-val">0.223</span></pre>
-          </div>
-        </div>
-      </div>
-      <div class="project-copy">
-        <p class="project-year">2025</p>
-        <h3>Forecasting Misoprostol Distribution Using Temporal Convolutional Networks</h3>
-        <p class="project-summary">Built a time-series forecasting model on four years of official BPOM pharmaceutical distribution data (2021–2024) to help regulators anticipate volumes and flag unusual spikes earlier. Deployed as an interactive Streamlit app.</p>
-        <ul class="project-findings">
-          <li>Identified a gradual upward trend plus consistent weekly seasonality in distribution patterns.</li>
-          <li>Tuned TCN achieved a forecast error below 6% (NMAE 0.057) — accurate enough to support risk-based monitoring strategies.</li>
-        </ul>
-        <div class="chips chips-tools">
-          <span class="chip chip-tool">Python</span>
-          <span class="chip chip-tool">Darts</span>
-          <span class="chip chip-tool">Streamlit</span>
-          <span class="chip chip-tool">NumPy</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/talee02/Temporal-Convolutional-Network-Time-Series-Forecasting" target="_blank" rel="noopener" class="btn-link">View code ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 5 — Data Mining -->
-    <article class="project">
-      <div class="project-media">
-        <div class="window">
-          <div class="window-bar">
-            <span class="window-dot dot-1"></span><span class="window-dot dot-2"></span><span class="window-dot dot-3"></span>
-            <span class="window-title">platform_counts.log</span>
-          </div>
-          <div class="window-body code-block">
-<pre><span class="code-comment"># Listings scraped per platform</span>
-Facebook   <span class="code-val">175</span>
-Twitter     <span class="code-val">52</span>
-Tokopedia   <span class="code-val">10</span>
-
-<span class="code-comment"># Sentiment classification</span>
-Negative   <span class="code-val">72.8%</span>
-Neutral    <span class="code-val">11.9%</span>
-Positive   <span class="code-val">15.4%</span>
-
-<span class="code-comment"># Seller contacts extracted: 49</span></pre>
-          </div>
-        </div>
-      </div>
-      <div class="project-copy">
-        <p class="project-year">2024</p>
-        <h3>Data Mining of Illegal Drug Sales on Marketplaces & Social Media</h3>
-        <p class="project-summary">Scraped and classified unauthorized pharmaceutical listings across Facebook, Twitter, and Tokopedia using keyword-based mining — combining geographic mapping, sentiment classification, and contact extraction into a monitoring dashboard for regulators.</p>
-        <ul class="project-findings">
-          <li>Facebook accounted for the majority of cases; illegal activity was heavily concentrated in Java Island.</li>
-          <li>72.8% of content carried negative sentiment — flagging urgency in the keyword clusters found.</li>
-        </ul>
-        <div class="chips chips-tools">
-          <span class="chip chip-tool">Python</span>
-          <span class="chip chip-tool">NumPy</span>
-          <span class="chip chip-tool">Power BI</span>
-          <span class="chip chip-tool">Bardeen</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/talee02/Data-Mining-of-Illegal-Drug-Sales-on-Marketplaces-and-Social-Media" target="_blank" rel="noopener" class="btn-link">View code ↗</a>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="contact">
-    <div class="window contact-window">
-      <div class="window-bar">
-        <span class="window-dot dot-1"></span><span class="window-dot dot-2"></span><span class="window-dot dot-3"></span>
-        <span class="window-title">contact.sh</span>
-      </div>
-      <div class="window-body">
-        <pre class="terminal-text static-prompt">nf@career:~$ contact --hire</pre>
-        <h2>Let's work together.</h2>
-        <p class="contact-lede">Open to Business Intelligence and Data Analyst roles — and always happy to talk through a dataset.</p>
-        <div class="contact-list">
-          <a class="contact-row" href="mailto:nurmalitafitri02@gmail.com">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">nurmalitafitri02@gmail.com</span>
-          </a>
-          <a class="contact-row" href="https://www.linkedin.com/in/nurmalitafitri/" target="_blank" rel="noopener">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">linkedin.com/in/nurmalitafitri</span>
-          </a>
-          <a class="contact-row" href="https://github.com/talee02" target="_blank" rel="noopener">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">github.com/talee02</span>
-          </a>
-          <a class="contact-row" href="https://www.kaggle.com/naurafitri" target="_blank" rel="noopener">
-            <span class="contact-label">Kaggle</span>
-            <span class="contact-value">kaggle.com/naurafitri</span>
-          </a>
-        </div>
+  <!-- 1. Retail Supply Chain -->
+  <article class="project">
+    <div class="proj-media">
+      <span class="proj-badge">Featured</span>
+      <div class="img-frame">
+        <img src="assets/retail-dashboard.jpg" alt="Retail Supply Chain Power BI dashboard">
       </div>
     </div>
-  </section>
+    <div class="proj-copy">
+      <p class="proj-year">2026</p>
+      <h3>Retail Supply Chain Sales Analysis</h3>
+      <p class="proj-desc">Analyzed four years of retail transactions (2014–2018, 5,009 orders) to surface where the business was making and losing money. Built an interactive Power BI dashboard covering revenue, profit margin, shipping, and sales-rep performance.</p>
+      <ul class="proj-findings">
+        <li>Technology products drove the highest profit; heavier discounting consistently compressed margin.</li>
+        <li>A 16% return rate was flagged as a key operational risk — a signal hidden in raw transaction data.</li>
+        <li>Standard Class dominated shipping at 59.8% of orders, averaging 3 days to deliver.</li>
+      </ul>
+      <div class="chips chips-tools">
+        <span class="chip chip-teal">Power BI</span>
+        <span class="chip chip-teal">MySQL</span>
+        <span class="chip chip-teal">DAX</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/talee02/Retail-Supply-Chain-Sales-Performance-Analysis" target="_blank" rel="noopener" class="proj-btn">View code</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2. FY2025 Budget Variance -->
+  <article class="project proj-flip">
+    <div class="proj-media">
+      <div class="img-frame">
+        <img src="assets/finance-dashboard.jpg" alt="FY2025 Departmental Budget Dashboard — Excel">
+      </div>
+    </div>
+    <div class="proj-copy">
+      <p class="proj-year">2025</p>
+      <h3>FY2025 Budget Variance Review</h3>
+      <p class="proj-desc">Built an end-to-end Excel budget variance analysis across 6 departments, 10 expense categories, and 1,834 source transactions — from raw messy data to a clean summary dashboard tracking actual vs. planned spend for the full fiscal year.</p>
+      <ul class="proj-findings">
+        <li>Total actual spend came in $253K under budget (4.9% favorable variance) — Operations was the largest single contributor to savings.</li>
+        <li>Monthly trend analysis revealed spend volatility in Nov–Dec, suggesting a forecasting gap in end-of-year planning.</li>
+        <li>Built with structured formulas (SUMIF, IFERROR, INDEX-MATCH) — no macros, fully transparent and easy to hand off.</li>
+      </ul>
+      <div class="chips chips-tools">
+        <span class="chip chip-teal">Excel</span>
+        <span class="chip chip-teal">Pivot Tables</span>
+        <span class="chip chip-teal">Budget Analysis</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/talee02" target="_blank" rel="noopener" class="proj-btn proj-btn-dim">Repo coming soon</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3. TCN Forecasting -->
+  <article class="project">
+    <div class="proj-media">
+      <div class="img-frame img-frame-double">
+        <img src="assets/tcn-forecast.jpg" alt="TCN model — actual vs predicted forecast chart" class="double-img-top">
+        <img src="assets/streamlit-app.jpg" alt="Streamlit forecasting app UI" class="double-img-bot">
+      </div>
+    </div>
+    <div class="proj-copy">
+      <p class="proj-year">2025</p>
+      <h3>Forecasting Misoprostol Distribution Using Temporal Convolutional Networks</h3>
+      <p class="proj-desc">Built a time-series forecasting model on four years of BPOM pharmaceutical distribution data (2021–2024) to help regulators anticipate volumes and catch unusual spikes earlier. Deployed as a local Streamlit app with per-distributor forecasting.</p>
+      <ul class="proj-findings">
+        <li>Model error stayed below 6% (NMAE 0.057) — accurate enough to support risk-based monitoring decisions.</li>
+        <li>Identified consistent weekly seasonality and a gradual upward distribution trend across the dataset.</li>
+        <li>Streamlit app allows regulators to select any distributor and generate a 7–90 day forecast on demand.</li>
+      </ul>
+      <div class="chips chips-tools">
+        <span class="chip chip-teal">Python</span>
+        <span class="chip chip-teal">Darts</span>
+        <span class="chip chip-teal">Streamlit</span>
+        <span class="chip chip-teal">NumPy</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/talee02/Temporal-Convolutional-Network-Time-Series-Forecasting" target="_blank" rel="noopener" class="proj-btn">View code</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4. Data Mining -->
+  <article class="project proj-flip">
+    <div class="proj-media">
+      <div class="img-frame">
+        <img src="assets/datamining-dashboard.jpg" alt="Power BI dashboard — illegal drug sales geographic distribution">
+      </div>
+    </div>
+    <div class="proj-copy">
+      <p class="proj-year">2024</p>
+      <h3>Data Mining of Illegal Drug Sales on Marketplaces &amp; Social Media</h3>
+      <p class="proj-desc">Scraped and classified unauthorized pharmaceutical listings across Facebook, Twitter, and Tokopedia using keyword-based mining — combining geographic mapping, sentiment classification, and contact extraction into a monitoring dashboard for regulators.</p>
+      <ul class="proj-findings">
+        <li>Facebook accounted for 175 of 237 cases; East Java, Central Java, and Jakarta topped the provincial breakdown.</li>
+        <li>72.8% of scraped content carried negative sentiment — consistent with covert, urgency-driven sales language.</li>
+        <li>Extracted 49 seller phone numbers for further regulatory investigation.</li>
+      </ul>
+      <div class="chips chips-tools">
+        <span class="chip chip-teal">Python</span>
+        <span class="chip chip-teal">NumPy</span>
+        <span class="chip chip-teal">Power BI</span>
+        <span class="chip chip-teal">Bardeen</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/talee02/Data-Mining-of-Illegal-Drug-Sales-on-Marketplaces-and-Social-Media" target="_blank" rel="noopener" class="proj-btn">View code</a>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <h2>Let's work together.</h2>
+    <p class="contact-sub">Open to Business Intelligence and Data Analyst roles — and always happy to talk through a dataset.</p>
+    <div class="contact-list">
+      <a href="mailto:nurmalitafitri02@gmail.com" class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-val">nurmalitafitri02@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/nurmalitafitri/" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-val">linkedin.com/in/nurmalitafitri</span>
+      </a>
+      <a href="https://github.com/talee02" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-val">github.com/talee02</span>
+      </a>
+      <a href="https://www.kaggle.com/naurafitri" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-label">Kaggle</span>
+        <span class="contact-val">kaggle.com/naurafitri</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 </main>
 
 <footer class="footer">
-  <p>© 2026 Nurmalita Fitri Ramadani · Built with HTML, CSS & JS · Hosted on GitHub Pages</p>
+  <p>© 2026 Nurmalita Fitri Ramadani &nbsp;·&nbsp; Hosted on GitHub Pages</p>
 </footer>
 
 <script src="script.js"></script>
