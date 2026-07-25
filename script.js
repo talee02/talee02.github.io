@@ -1,263 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nurmalita Fitri Ramadani — Data Analyst</title>
-<meta name="description" content="Data Analyst & Business Intelligence portfolio of Nurmalita Fitri Ramadani — SQL, Power BI, Python, Excel.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-<!-- NAV -->
-<header class="topbar">
-  <div class="topbar-inner">
-    <span class="brand"><span class="bn">nf</span><span class="bs">@</span><span class="bh">portfolio</span></span>
-    <nav class="tabs">
-      <a href="#home"     class="tab" data-tab="home">home</a>
-      <a href="#about"    class="tab" data-tab="about">about</a>
-      <a href="#projects" class="tab" data-tab="projects">projects</a>
-      <a href="#contact"  class="tab" data-tab="contact">contact</a>
-    </nav>
-    <a class="hire-btn" href="#contact">Hire me</a>
-  </div>
-</header>
+// ── Scroll-spy ───────────────────────────────────────────
+const tabs     = document.querySelectorAll('.tab');
+const sections = document.querySelectorAll('section[id]');
 
-<main>
+function setActive(id) {
+  tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+}
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <!-- animated background orbs -->
-  <div class="orb orb-1" aria-hidden="true"></div>
-  <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div>
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }),
+    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+  );
+  sections.forEach(s => spy.observe(s));
+}
 
-  <div class="hero-inner">
-    <p class="eyebrow" data-animate>DATA ANALYST &nbsp;·&nbsp; BUSINESS INTELLIGENCE</p>
-    <h1 data-animate data-delay="1">
-      Nurmalita Fitri<br>
-      <span class="gradient-text">Ramadani</span>
-    </h1>
-    <p class="hero-desc" data-animate data-delay="2">
-      I turn messy operational data into dashboards and forecasts<br class="br-desktop"> teams can act on — with SQL, Power BI, Python, and Excel.
-    </p>
-    <div class="hero-btns" data-animate data-delay="3">
-      <a href="#projects" class="btn-primary">View projects</a>
-      <a href="https://github.com/talee02" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
-    </div>
-    <div class="social-row" data-animate data-delay="4">
-      <a href="https://www.linkedin.com/in/nurmalitafitri/" target="_blank" rel="noopener" class="soc">LinkedIn</a>
-      <span class="soc-sep">·</span>
-      <a href="https://github.com/talee02" target="_blank" rel="noopener" class="soc">GitHub</a>
-      <span class="soc-sep">·</span>
-      <a href="https://www.kaggle.com/naurafitri" target="_blank" rel="noopener" class="soc">Kaggle</a>
-      <span class="soc-sep">·</span>
-      <a href="mailto:nurmalitafitri02@gmail.com" class="soc">Email</a>
-    </div>
-    <p class="avail" data-animate data-delay="5">
-      <span class="pulse"></span>Open to BI &amp; Data Analyst roles &nbsp;·&nbsp; Surabaya / Remote
-    </p>
-  </div>
-</section>
+// ── Hero entrance stagger ────────────────────────────────
+function runHeroEntrance() {
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    if (reduced) { el.classList.add('visible'); return; }
+    setTimeout(() => el.classList.add('visible'), 80);
+  });
+}
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="section-label">about</div>
-  <div class="about-grid">
+// ── Project scroll reveal ────────────────────────────────
+if (!reduced && 'IntersectionObserver' in window) {
+  const rev = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); rev.unobserve(e.target); }
+    }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.project').forEach(el => rev.observe(el));
+} else {
+  document.querySelectorAll('.project').forEach(el => el.classList.add('visible'));
+}
 
-    <div class="about-photo-col">
-      <div class="photo-ring">
-        <img src="assets/profile.jpg" alt="Nurmalita Fitri Ramadani">
-      </div>
-    </div>
-
-    <div class="about-text-col">
-      <h2>About me</h2>
-      <p>I'm a Data Science graduate with hands-on experience on real pharmaceutical distribution and retail supply chain datasets. I enjoy building dashboards, forecasting models, and structured analyses that turn raw operational data into something teams can actually use to make decisions.</p>
-      <p>I work mainly in <strong>SQL</strong>, <strong>Power BI</strong>, <strong>Python</strong>, and <strong>Excel</strong>, and I'm looking for a Business Intelligence or Data Analyst role where clear, decision-ready insights matter.</p>
-
-      <div class="skills-section">
-        <p class="skills-title">Technical skills</p>
-        <div class="skill-rows">
-          <div class="skill-row">
-            <span class="skill-cat">Query &amp; Data</span>
-            <div class="chips"><span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Excel</span></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-cat">BI &amp; Visualization</span>
-            <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Dashboard Design</span></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-cat">Programming</span>
-            <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-cat">Forecasting &amp; ML</span>
-            <div class="chips"><span class="chip">Time Series</span><span class="chip">TCN</span><span class="chip">Darts</span><span class="chip">Streamlit</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-  <div class="section-label">projects</div>
-  <h2 class="section-h2">Selected projects</h2>
-
-  <!-- 1. Retail Supply Chain — VIDEO -->
-  <article class="project">
-    <div class="proj-media">
-      <span class="proj-badge">Featured</span>
-      <div class="img-frame video-frame">
-        <video autoplay muted loop playsinline>
-          <source src="assets/retail-demo-opt.mp4" type="video/mp4">
-          <img src="assets/retail-dashboard.jpg" alt="Retail Supply Chain Power BI dashboard fallback">
-        </video>
-      </div>
-    </div>
-    <div class="proj-copy">
-      <p class="proj-year">2026</p>
-      <h3>Retail Supply Chain Sales Analysis</h3>
-      <p class="proj-desc">Analyzed four years of retail transactions (2014–2018, 5,009 orders) to surface where the business was making and losing money. Built an interactive Power BI dashboard covering revenue, profit margin, shipping, and sales-rep performance.</p>
-      <ul class="proj-findings">
-        <li>Technology products drove the highest profit; heavier discounting consistently compressed margin.</li>
-        <li>A 16% return rate was flagged as a key operational risk — a signal hidden in raw transaction data.</li>
-        <li>Standard Class dominated shipping at 59.8% of orders, averaging 3 days to deliver.</li>
-      </ul>
-      <div class="chips chips-tools">
-        <span class="chip chip-teal">Power BI</span>
-        <span class="chip chip-teal">MySQL</span>
-        <span class="chip chip-teal">DAX</span>
-      </div>
-      <div class="proj-links">
-        <a href="https://github.com/talee02/Retail-Supply-Chain-Sales-Performance-Analysis" target="_blank" rel="noopener" class="proj-btn">View code</a>
-      </div>
-    </div>
-  </article>
-
-  <!-- 2. FY2025 Budget Variance -->
-  <article class="project proj-flip">
-    <div class="proj-media">
-      <div class="img-frame">
-        <img src="assets/finance-dashboard.jpg" alt="FY2025 Departmental Budget Dashboard">
-      </div>
-    </div>
-    <div class="proj-copy">
-      <p class="proj-year">2025</p>
-      <h3>FY2025 Budget Variance Review</h3>
-      <p class="proj-desc">Built an end-to-end Excel budget variance analysis across 6 departments, 10 expense categories, and 1,834 source transactions — from raw data to a clean summary dashboard tracking actual vs. planned spend for the full fiscal year.</p>
-      <ul class="proj-findings">
-        <li>Total actual spend came in $253K under budget (4.9% favorable variance) — Operations was the largest contributor to savings.</li>
-        <li>Monthly trend analysis revealed spend volatility in Nov–Dec, suggesting a gap in end-of-year planning.</li>
-        <li>Built with SUMIF, IFERROR, and INDEX-MATCH — no macros, fully transparent and easy to hand off.</li>
-      </ul>
-      <div class="chips chips-tools">
-        <span class="chip chip-teal">Excel</span>
-        <span class="chip chip-teal">Pivot Tables</span>
-        <span class="chip chip-teal">Budget Analysis</span>
-      </div>
-      <div class="proj-links">
-        <a href="https://github.com/talee02" target="_blank" rel="noopener" class="proj-btn proj-btn-dim">Repo coming soon</a>
-      </div>
-    </div>
-  </article>
-
-  <!-- 3. TCN Forecasting -->
-  <article class="project">
-    <div class="proj-media">
-      <div class="img-frame img-frame-double">
-        <img src="assets/tcn-forecast.jpg" alt="TCN model actual vs predicted forecast">
-        <img src="assets/streamlit-app.jpg" alt="Streamlit forecasting app">
-      </div>
-    </div>
-    <div class="proj-copy">
-      <p class="proj-year">2025</p>
-      <h3>Forecasting Misoprostol Distribution Using Temporal Convolutional Networks</h3>
-      <p class="proj-desc">Built a time-series forecasting model on four years of BPOM pharmaceutical distribution data (2021–2024) to help regulators anticipate volumes and catch unusual spikes earlier. Deployed as a local Streamlit app with per-distributor forecasting.</p>
-      <ul class="proj-findings">
-        <li>Model error stayed below 6% (NMAE 0.057) — accurate enough to support risk-based monitoring decisions.</li>
-        <li>Identified consistent weekly seasonality and a gradual upward distribution trend across the dataset.</li>
-        <li>Streamlit app allows regulators to select any distributor and generate a 7–90 day forecast on demand.</li>
-      </ul>
-      <div class="chips chips-tools">
-        <span class="chip chip-teal">Python</span>
-        <span class="chip chip-teal">Darts</span>
-        <span class="chip chip-teal">Streamlit</span>
-        <span class="chip chip-teal">NumPy</span>
-      </div>
-      <div class="proj-links">
-        <a href="https://github.com/talee02/Temporal-Convolutional-Network-Time-Series-Forecasting" target="_blank" rel="noopener" class="proj-btn">View code</a>
-      </div>
-    </div>
-  </article>
-
-  <!-- 4. Data Mining -->
-  <article class="project proj-flip">
-    <div class="proj-media">
-      <div class="img-frame">
-        <img src="assets/datamining-dashboard.jpg" alt="Power BI — illegal drug sales geographic distribution">
-      </div>
-    </div>
-    <div class="proj-copy">
-      <p class="proj-year">2024</p>
-      <h3>Data Mining of Illegal Drug Sales on Marketplaces &amp; Social Media</h3>
-      <p class="proj-desc">Scraped and classified unauthorized pharmaceutical listings across Facebook, Twitter, and Tokopedia using keyword-based mining — combining geographic mapping, sentiment classification, and contact extraction into a monitoring dashboard for regulators.</p>
-      <ul class="proj-findings">
-        <li>Facebook accounted for 175 of 237 cases; East Java, Central Java, and Jakarta topped the provincial breakdown.</li>
-        <li>72.8% of scraped content carried negative sentiment — consistent with covert, urgency-driven sales language.</li>
-        <li>Extracted 49 seller phone numbers for further regulatory investigation.</li>
-      </ul>
-      <div class="chips chips-tools">
-        <span class="chip chip-teal">Python</span>
-        <span class="chip chip-teal">NumPy</span>
-        <span class="chip chip-teal">Power BI</span>
-        <span class="chip chip-teal">Bardeen</span>
-      </div>
-      <div class="proj-links">
-        <a href="https://github.com/talee02/Data-Mining-of-Illegal-Drug-Sales-on-Marketplaces-and-Social-Media" target="_blank" rel="noopener" class="proj-btn">View code</a>
-      </div>
-    </div>
-  </article>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="contact-inner">
-    <h2>Let's work together.</h2>
-    <p class="contact-sub">Open to Business Intelligence and Data Analyst roles — and always happy to talk through a dataset.</p>
-    <div class="contact-list">
-      <a href="mailto:nurmalitafitri02@gmail.com" class="contact-row">
-        <span class="contact-label">Email</span>
-        <span class="contact-val">nurmalitafitri02@gmail.com</span>
-      </a>
-      <a href="https://www.linkedin.com/in/nurmalitafitri/" target="_blank" rel="noopener" class="contact-row">
-        <span class="contact-label">LinkedIn</span>
-        <span class="contact-val">linkedin.com/in/nurmalitafitri</span>
-      </a>
-      <a href="https://github.com/talee02" target="_blank" rel="noopener" class="contact-row">
-        <span class="contact-label">GitHub</span>
-        <span class="contact-val">github.com/talee02</span>
-      </a>
-      <a href="https://www.kaggle.com/naurafitri" target="_blank" rel="noopener" class="contact-row">
-        <span class="contact-label">Kaggle</span>
-        <span class="contact-val">kaggle.com/naurafitri</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <p>© 2026 Nurmalita Fitri Ramadani &nbsp;·&nbsp; Hosted on GitHub Pages</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+// ── Init ─────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  setActive('home');
+  runHeroEntrance();
+});
